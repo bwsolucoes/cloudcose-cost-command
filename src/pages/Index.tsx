@@ -80,8 +80,10 @@ const Index = () => {
               <span className="text-2xl font-bold text-cloudcose-navy">CloudCose</span>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#funcionalidades" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Funcionalidades</a>
+              <a href="#inicio" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Início</a>
+              <a href="#problemas" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Problemas</a>
               <a href="#beneficios" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Benefícios</a>
+              <a href="#funcionalidades" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Funcionalidades</a>
               <a href="#contato" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Contato</a>
               <Button 
                 onClick={handleDemoRequest}
@@ -95,7 +97,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-32 px-4 sm:px-6 lg:px-8 relative bg-cloudcose-background">
+      <section id="inicio" className="pt-20 pb-32 px-4 sm:px-6 lg:px-8 relative bg-cloudcose-background">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
@@ -145,7 +147,7 @@ const Index = () => {
       </section>
 
       {/* Problemas Section */}
-      <section className="py-24 bg-cloudcose-white">
+      <section id="problemas" className="py-24 bg-cloudcose-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-cloudcose-navy mb-6">
