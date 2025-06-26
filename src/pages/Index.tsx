@@ -25,7 +25,7 @@ const Index = () => {
       if (hash) {
         const element = document.querySelector(hash) as HTMLElement;
         if (element) {
-          const headerHeight = 80; // Approximate header height
+          const headerHeight = 120; // Increased offset for better visibility
           const elementPosition = element.offsetTop - headerHeight;
           window.scrollTo({
             top: elementPosition,
@@ -51,7 +51,7 @@ const Index = () => {
         const targetId = link.getAttribute('href');
         const targetElement = document.querySelector(targetId) as HTMLElement;
         if (targetElement) {
-          const headerHeight = 80;
+          const headerHeight = 120; // Increased offset for better visibility
           const elementPosition = targetElement.offsetTop - headerHeight;
           window.scrollTo({
             top: elementPosition,
