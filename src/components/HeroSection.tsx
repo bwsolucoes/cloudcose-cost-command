@@ -50,7 +50,7 @@ const HeroSection = ({ onLogin, onFreeTrial }: HeroSectionProps) => {
                 className="h-8 object-contain"
               />
               <img 
-                src="/lovable-uploads/16c4dd15-a0b8-4193-b4c0-fb3e062ad46c.png" 
+                src="/lovable-uploads/f0004152-638c-4450-a721-1d205eff0193.png" 
                 alt="Google Cloud" 
                 className="h-8 object-contain"
               />
