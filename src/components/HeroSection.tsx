@@ -41,7 +41,7 @@ const HeroSection = ({ onLogin, onFreeTrial }: HeroSectionProps) => {
           </div>
           <div className="animate-slide-in-right">
             <div className="bg-cloudcose-white rounded-2xl shadow-elevated p-4 border border-gray-100">
-              <img src="/lovable-uploads/bb3328b6-a628-497b-944e-abf8ad36efce.png" 
+              <img src="/lovable-uploads/87cf556b-4b42-45c9-9960-b14f0eb0206e.png" 
                    alt="Dashboard CloudCose" 
                    className="w-full h-96 object-cover object-left-top rounded-xl" />
             </div>
