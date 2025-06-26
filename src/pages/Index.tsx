@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -311,7 +310,7 @@ const Index = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-24 bg-cloudcose-navy">
+      <section id="contato" className="py-24 bg-cloudcose-navy">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-cloudcose-white mb-8 leading-tight">
             Transforme seus custos em 
@@ -333,7 +332,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contato" className="bg-cloudcose-navy py-16 border-t border-cloudcose-white/10">
+      <footer className="bg-cloudcose-navy py-16 border-t border-cloudcose-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-12">
             <div className="md:col-span-2">
@@ -375,7 +374,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-cloudcose-white/10 mt-12 pt-8 text-center">
-            <p className="text-cloudcose-gray-light">© 2024 CloudCose. Todos os direitos reservados.</p>
+            <p className="text-cloudcose-gray-light">© 2025 CloudCose. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
