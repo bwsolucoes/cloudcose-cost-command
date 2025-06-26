@@ -63,10 +63,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// CloudCose brand colors
-				'cloudcose-purple': '#4B0082',
-				'cloudcose-blue': '#0055AA',
-				'cloudcose-dark-blue': '#003366',
+				// CloudCose brand colors - updated to match the image
+				'cloudcose-blue': '#4FC3F7',
+				'cloudcose-blue-dark': '#2E86C1',
+				'cloudcose-blue-gradient': '#5DADE2',
+				'cloudcose-light-blue': '#85C1E9',
+				'cloudcose-navy': '#2C3E50',
 				'cloudcose-light': '#F8FAFC',
 			},
 			borderRadius: {
@@ -110,13 +112,25 @@ export default {
 						opacity: '1',
 						transform: 'translateX(0)'
 					}
+				},
+				'bounce-down': {
+					'0%, 20%, 50%, 80%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'40%': {
+						transform: 'translateY(-8px)'
+					},
+					'60%': {
+						transform: 'translateY(-4px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-in-right': 'slide-in-right 0.8s ease-out'
+				'slide-in-right': 'slide-in-right 0.8s ease-out',
+				'bounce-down': 'bounce-down 2s infinite'
 			},
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
