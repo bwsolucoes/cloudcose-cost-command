@@ -10,10 +10,12 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
-  const handleDemoRequest = () => {
-    const subject = encodeURIComponent("Quero agendar uma demonstração.");
-    const mailtoUrl = `mailto:contact@cloudcose.com?subject=${subject}`;
-    window.location.href = mailtoUrl;
+  const handleLogin = () => {
+    window.open('https://app.cloudcose.com/', '_blank');
+  };
+
+  const handleFreeTrial = () => {
+    window.open('https://app.cloudcose.com/register?next=/', '_blank');
   };
 
   const handleContact = () => {
@@ -74,8 +76,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-cloudcose-white font-inter">
-      <Header onDemoRequest={handleDemoRequest} />
-      <HeroSection onDemoRequest={handleDemoRequest} />
+      <Header onLogin={handleLogin} onFreeTrial={handleFreeTrial} />
+      <HeroSection onLogin={handleLogin} onFreeTrial={handleFreeTrial} />
       <ProblemsSection />
       <BenefitsSection />
       <FunctionalitiesSection />

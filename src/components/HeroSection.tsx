@@ -4,10 +4,11 @@ import { Button } from '@/components/ui/button';
 import ScrollIndicator from '@/components/ScrollIndicator';
 
 interface HeroSectionProps {
-  onDemoRequest: () => void;
+  onLogin: () => void;
+  onFreeTrial: () => void;
 }
 
-const HeroSection = ({ onDemoRequest }: HeroSectionProps) => {
+const HeroSection = ({ onLogin, onFreeTrial }: HeroSectionProps) => {
   return (
     <section id="inicio" className="pt-20 pb-32 px-4 sm:px-6 lg:px-8 relative bg-cloudcose-background">
       <div className="max-w-7xl mx-auto">
@@ -23,18 +24,26 @@ const HeroSection = ({ onDemoRequest }: HeroSectionProps) => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                onClick={onDemoRequest}
+                onClick={onFreeTrial}
                 className="bg-cloudcose-blue hover:bg-cloudcose-navy text-cloudcose-white px-8 py-4 text-lg font-semibold shadow-professional"
               >
-                Solicitar Demonstração
+                Free Trial
+              </Button>
+              <Button 
+                size="lg" 
+                onClick={onLogin}
+                variant="outline"
+                className="border-cloudcose-blue text-cloudcose-blue hover:bg-cloudcose-blue hover:text-white px-8 py-4 text-lg font-semibold"
+              >
+                Login
               </Button>
             </div>
           </div>
           <div className="animate-slide-in-right">
             <div className="bg-cloudcose-white rounded-2xl shadow-elevated p-8 border border-gray-100">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
+              <img src="/lovable-uploads/b8c9e0a7-4a15-4b8c-9e2b-7f3d6c8a5b4e.png" 
                    alt="Dashboard CloudCose" 
-                   className="w-full h-64 object-cover rounded-xl" />
+                   className="w-full h-80 object-contain rounded-xl" />
             </div>
           </div>
         </div>

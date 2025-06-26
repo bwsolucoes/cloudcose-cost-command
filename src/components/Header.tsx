@@ -3,10 +3,11 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
 interface HeaderProps {
-  onDemoRequest: () => void;
+  onLogin: () => void;
+  onFreeTrial: () => void;
 }
 
-const Header = ({ onDemoRequest }: HeaderProps) => {
+const Header = ({ onLogin, onFreeTrial }: HeaderProps) => {
   return (
     <header className="bg-cloudcose-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm bg-cloudcose-white/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,12 +25,21 @@ const Header = ({ onDemoRequest }: HeaderProps) => {
             <a href="#beneficios" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Benefícios</a>
             <a href="#funcionalidades" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Funcionalidades</a>
             <a href="#contato" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Contato</a>
-            <Button 
-              onClick={onDemoRequest}
-              className="bg-cloudcose-blue hover:bg-cloudcose-navy transition-colors shadow-professional"
-            >
-              Solicitar Demo
-            </Button>
+            <div className="flex items-center space-x-3">
+              <Button 
+                onClick={onLogin}
+                variant="outline"
+                className="border-cloudcose-blue text-cloudcose-blue hover:bg-cloudcose-blue hover:text-white"
+              >
+                Login
+              </Button>
+              <Button 
+                onClick={onFreeTrial}
+                className="bg-cloudcose-blue hover:bg-cloudcose-navy transition-colors shadow-professional"
+              >
+                Free Trial
+              </Button>
+            </div>
           </nav>
         </div>
       </div>
