@@ -23,7 +23,7 @@ const Index = () => {
     const handleHashChange = () => {
       const hash = window.location.hash;
       if (hash) {
-        const element = document.querySelector(hash);
+        const element = document.querySelector(hash) as HTMLElement;
         if (element) {
           const headerHeight = 80; // Approximate header height
           const elementPosition = element.offsetTop - headerHeight;
@@ -49,7 +49,7 @@ const Index = () => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = link.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+        const targetElement = document.querySelector(targetId) as HTMLElement;
         if (targetElement) {
           const headerHeight = 80;
           const elementPosition = targetElement.offsetTop - headerHeight;
