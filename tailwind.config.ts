@@ -63,13 +63,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// CloudCose brand colors - updated to match the image
-				'cloudcose-blue': '#4FC3F7',
-				'cloudcose-blue-dark': '#2E86C1',
-				'cloudcose-blue-gradient': '#5DADE2',
-				'cloudcose-light-blue': '#85C1E9',
-				'cloudcose-navy': '#2C3E50',
-				'cloudcose-light': '#F8FAFC',
+				// CloudCose Professional Brand Colors
+				'cloudcose-navy': '#1B365D',
+				'cloudcose-blue': '#2563EB',
+				'cloudcose-blue-light': '#3B82F6',
+				'cloudcose-accent': '#60A5FA',
+				'cloudcose-gray': '#64748B',
+				'cloudcose-gray-light': '#94A3B8',
+				'cloudcose-background': '#F8FAFC',
+				'cloudcose-success': '#059669',
+				'cloudcose-white': '#FFFFFF',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -113,14 +116,11 @@ export default {
 						transform: 'translateX(0)'
 					}
 				},
-				'bounce-down': {
-					'0%, 20%, 50%, 80%, 100%': {
+				'bounce-subtle': {
+					'0%, 100%': {
 						transform: 'translateY(0)'
 					},
-					'40%': {
-						transform: 'translateY(-8px)'
-					},
-					'60%': {
+					'50%': {
 						transform: 'translateY(-4px)'
 					}
 				}
@@ -130,10 +130,15 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.8s ease-out',
-				'bounce-down': 'bounce-down 2s infinite'
+				'bounce-subtle': 'bounce-subtle 2s infinite'
 			},
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
+			},
+			boxShadow: {
+				'professional': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+				'card': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+				'elevated': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
 			}
 		}
 	},
