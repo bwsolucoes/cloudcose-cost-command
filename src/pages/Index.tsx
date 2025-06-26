@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,6 +5,18 @@ import { Cloud, Zap, Clock, Check, TrendingDown, Shield, BarChart3, Settings, Ey
 import ScrollIndicator from '@/components/ScrollIndicator';
 
 const Index = () => {
+  const handleDemoRequest = () => {
+    const subject = encodeURIComponent("Quero agendar uma demonstração.");
+    const mailtoUrl = `mailto:contact@cloudcose.com?subject=${subject}`;
+    window.location.href = mailtoUrl;
+  };
+
+  const handleContact = () => {
+    const subject = encodeURIComponent("Quero conhecer mais sobre o CloudCose");
+    const mailtoUrl = `mailto:contact@cloudcose.com?subject=${subject}`;
+    window.location.href = mailtoUrl;
+  };
+
   return (
     <div className="min-h-screen bg-cloudcose-white font-inter">
       {/* Header */}
@@ -22,7 +33,10 @@ const Index = () => {
               <a href="#funcionalidades" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Funcionalidades</a>
               <a href="#beneficios" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Benefícios</a>
               <a href="#contato" className="text-cloudcose-gray hover:text-cloudcose-navy transition-colors font-medium">Contato</a>
-              <Button className="bg-cloudcose-blue hover:bg-cloudcose-navy transition-colors shadow-professional">
+              <Button 
+                onClick={handleDemoRequest}
+                className="bg-cloudcose-blue hover:bg-cloudcose-navy transition-colors shadow-professional"
+              >
                 Solicitar Demo
               </Button>
             </nav>
@@ -43,11 +57,12 @@ const Index = () => {
                 Visibilidade centralizada. Economia automática. Decisões orientadas por dados.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-cloudcose-blue hover:bg-cloudcose-navy text-cloudcose-white px-8 py-4 text-lg font-semibold shadow-professional">
+                <Button 
+                  size="lg" 
+                  onClick={handleDemoRequest}
+                  className="bg-cloudcose-blue hover:bg-cloudcose-navy text-cloudcose-white px-8 py-4 text-lg font-semibold shadow-professional"
+                >
                   Solicitar Demonstração
-                </Button>
-                <Button size="lg" variant="outline" className="border-2 border-cloudcose-blue text-cloudcose-blue hover:bg-cloudcose-blue hover:text-cloudcose-white px-8 py-4 text-lg font-semibold">
-                  Fale com um Especialista
                 </Button>
               </div>
             </div>
@@ -254,14 +269,12 @@ const Index = () => {
           <p className="text-xl text-cloudcose-gray-light mb-12 max-w-3xl mx-auto leading-relaxed">
             Junte-se a centenas de empresas que já otimizaram seus custos cloud com CloudCose
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="bg-cloudcose-blue hover:bg-cloudcose-blue-light text-cloudcose-white px-10 py-4 text-lg font-semibold shadow-professional">
-              Teste Gratuito
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-cloudcose-white text-cloudcose-white hover:bg-cloudcose-white hover:text-cloudcose-navy px-10 py-4 text-lg font-semibold">
-              Solicite Demonstração
-            </Button>
-            <Button size="lg" className="bg-cloudcose-accent hover:bg-cloudcose-blue-light text-cloudcose-navy px-10 py-4 text-lg font-semibold shadow-professional">
+          <div className="flex justify-center">
+            <Button 
+              size="lg" 
+              onClick={handleContact}
+              className="bg-cloudcose-accent hover:bg-cloudcose-blue-light text-cloudcose-navy px-10 py-4 text-lg font-semibold shadow-professional"
+            >
               Entre em Contato
             </Button>
           </div>
