@@ -40,10 +40,10 @@ const HeroSection = ({ onLogin, onFreeTrial }: HeroSectionProps) => {
             </div>
           </div>
           <div className="animate-slide-in-right">
-            <div className="bg-cloudcose-white rounded-2xl shadow-elevated p-8 border border-gray-100">
-              <img src="/lovable-uploads/8bbec3a1-889e-4cff-a8d5-96a28950d9e2.png" 
+            <div className="bg-cloudcose-white rounded-2xl shadow-elevated p-4 border border-gray-100">
+              <img src="/lovable-uploads/bb3328b6-a628-497b-944e-abf8ad36efce.png" 
                    alt="Dashboard CloudCose" 
-                   className="w-full h-80 object-contain rounded-xl" />
+                   className="w-full h-96 object-cover rounded-xl" />
             </div>
           </div>
         </div>
