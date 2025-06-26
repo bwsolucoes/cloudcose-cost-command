@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Cloud, Zap, Clock, Check, TrendingDown, Shield, BarChart3, Settings, Eye } from 'lucide-react';
@@ -16,6 +17,56 @@ const Index = () => {
     const mailtoUrl = `mailto:contact@cloudcose.com?subject=${subject}`;
     window.location.href = mailtoUrl;
   };
+
+  // Handle smooth scrolling with offset for fixed header
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          const headerHeight = 80; // Approximate header height
+          const elementPosition = element.offsetTop - headerHeight;
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    // Handle initial load with hash
+    if (window.location.hash) {
+      setTimeout(handleHashChange, 100);
+    }
+
+    // Handle hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Handle click events on anchor links
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const headerHeight = 80;
+          const elementPosition = targetElement.offsetTop - headerHeight;
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          });
+          // Update URL hash
+          window.history.pushState(null, null, targetId);
+        }
+      });
+    });
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-cloudcose-white font-inter">
