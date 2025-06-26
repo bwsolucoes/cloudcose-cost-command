@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -124,23 +123,7 @@ const Index = () => {
               <div className="bg-cloudcose-white rounded-2xl shadow-elevated p-8 border border-gray-100">
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
                      alt="Dashboard CloudCose" 
-                     className="w-full h-64 object-cover rounded-xl mb-6" />
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between bg-green-50 p-4 rounded-xl border border-green-100">
-                    <span className="text-base font-semibold text-cloudcose-gray">Economia Mensal</span>
-                    <span className="text-2xl font-bold text-cloudcose-success">R$ 24.680</span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-cloudcose-background p-4 rounded-xl text-center border border-gray-100">
-                      <div className="text-3xl font-bold text-cloudcose-navy">127</div>
-                      <div className="text-sm text-cloudcose-gray font-medium">Recursos Otimizados</div>
-                    </div>
-                    <div className="bg-cloudcose-background p-4 rounded-xl text-center border border-gray-100">
-                      <div className="text-3xl font-bold text-cloudcose-blue">68%</div>
-                      <div className="text-sm text-cloudcose-gray font-medium">Redução de Custos</div>
-                    </div>
-                  </div>
-                </div>
+                     className="w-full h-64 object-cover rounded-xl" />
               </div>
             </div>
           </div>
