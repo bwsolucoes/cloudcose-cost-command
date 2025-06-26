@@ -21,7 +21,7 @@ const HeroSection = ({ onLogin, onFreeTrial }: HeroSectionProps) => {
             <p className="text-xl text-cloudcose-gray mb-10 leading-relaxed max-w-lg">
               Visibilidade centralizada. Economia automática. Decisões orientadas por dados.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button 
                 size="lg" 
                 onClick={onFreeTrial}
@@ -37,6 +37,23 @@ const HeroSection = ({ onLogin, onFreeTrial }: HeroSectionProps) => {
               >
                 Login
               </Button>
+            </div>
+            <div className="flex items-center gap-6 opacity-70">
+              <img 
+                src="/lovable-uploads/8e3d7019-96ee-46f3-8c23-1ca5bf8ed50f.png" 
+                alt="AWS" 
+                className="h-8 object-contain"
+              />
+              <img 
+                src="/lovable-uploads/723de9c6-1ed1-4aa5-b93e-8a0481d8cda9.png" 
+                alt="Azure" 
+                className="h-8 object-contain"
+              />
+              <img 
+                src="/lovable-uploads/16c4dd15-a0b8-4193-b4c0-fb3e062ad46c.png" 
+                alt="Google Cloud" 
+                className="h-8 object-contain"
+              />
             </div>
           </div>
           <div className="animate-slide-in-right">
